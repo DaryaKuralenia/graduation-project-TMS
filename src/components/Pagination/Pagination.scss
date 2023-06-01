@@ -1,0 +1,39 @@
+.paginatio {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 0;
+  margin: 0 auto;
+
+  a {
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    color: #808080;
+  }
+  a:hover {
+    border-radius: 5px;
+    border: 1px solid #808080;
+    transition: all 3s;
+  }
+
+  .paginatio__link {
+    position: relative;
+    font-weight: bold;
+  }
+
+  .paginatio__link--active a {
+    position: relative;
+    color: #fff;
+    background: #0064eb;
+  }
+
+  .paginatio__link--disabled a {
+    position: relative;
+    color: rgb(198, 197, 202);
+    border: 1px solid rgb(198, 197, 202);
+  }
+}

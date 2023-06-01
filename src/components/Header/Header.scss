@@ -1,0 +1,42 @@
+@import "..//..//mixins.scss";
+
+.header-container {
+  width: 90%;
+  height: 60px;
+  @include flex-between;
+  padding-top: 5px;
+
+  .header-container__logo {
+    width: 20%;
+    cursor: pointer;
+  }
+
+  .header-container__user-icon {
+    width: 5%;
+    height: 80%;
+    @include border-style;
+    @include flex-center;
+    cursor: pointer;
+  }
+
+  .header-container__burger-menu {
+    @include border-style;
+    width: 5%;
+    height: 80%;
+    @include flex-center;
+    cursor: pointer;
+  }
+
+  .header-container__user-icon:hover,
+  .header-container__burger-menu:hover {
+    color: rgb(46, 19, 121);
+    background-color: #bcbcbd;
+    opacity: 0.8;
+    border: none;
+    transition: all 0.5s;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+    font-size: 2em;
+  }
+}

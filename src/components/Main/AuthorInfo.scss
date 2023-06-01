@@ -1,0 +1,131 @@
+.author-info-container {
+  width: 90%;
+  background-color: white;
+  border: 1px solid rgb(172, 169, 169);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 0;
+
+  .author-info-subcontainer {
+    width: 80%;
+
+    .author-info-subcontainer__description {
+      display: flex;
+      justify-content: space-between;
+
+      .author-info-subcontainer__description-img {
+        // width: 30%;
+        display: flex;
+        flex-direction: column;
+
+        img {
+          border-radius: 10px;
+        }
+
+        a {
+          text-decoration: none;
+          color: rgb(44, 44, 44);
+          padding-top: 5px;
+        }
+      }
+
+      .author-info-subcontainer__description-text {
+        width: 55%;
+        text-align: left;
+
+        h3 {
+          font-size: 1.7em;
+          color: rgb(39, 39, 39);
+          font-weight: bold;
+          text-align: left;
+        }
+
+        p {
+          padding: 10px 0;
+        }
+      }
+    }
+
+    .author-info-subcontainer__works {
+      padding: 25px 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+
+      .author-info-subcontainer__works-items {
+        li {
+          list-style-type: none;
+          cursor: pointer;
+          padding-top: 10px;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 10%;
+            height: 110px;
+            box-shadow: 3px 5px 5px rgb(116, 115, 115);
+            object-fit: cover;
+          }
+          .author-info-subcontainer__book-info {
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+
+            h4 {
+              width: 100%;
+              font-weight: bold;
+            }
+
+            span {
+              font-style: italic;
+            }
+          }
+        }
+      }
+
+      .paginatio {
+        position: relative;
+        // top: 100px;
+        left: calc((100% - 40%) / 2);
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        cursor: pointer;
+        padding-top: 20px;
+
+        a {
+          position: relative;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid #e5e5e5;
+          color: #808080;
+        }
+        a:hover {
+          border-radius: 5px;
+          border: 1px solid #808080;
+          transition: all 3s;
+        }
+
+        .paginatio__link {
+          position: relative;
+          font-weight: bold;
+        }
+
+        .paginatio__link--active a {
+          position: relative;
+          color: #fff;
+          background: #0064eb;
+        }
+
+        .paginatio__link--disabled a {
+          position: relative;
+          color: rgb(198, 197, 202);
+          border: 1px solid rgb(198, 197, 202);
+        }
+      }
+    }
+  }
+}

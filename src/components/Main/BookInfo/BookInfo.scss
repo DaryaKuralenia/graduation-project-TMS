@@ -1,0 +1,127 @@
+@import "../../../mixins.scss";
+
+.book-info-container {
+  width: 90%;
+  min-height: 500px;
+  background-color: white;
+  @include border-style;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0;
+
+  .book-info-container__left {
+    padding-left: 20px;
+    width: 25%;
+
+    img {
+      border-radius: 5px;
+      width: 80%;
+      box-shadow: 3px 5px 5px rgb(116, 115, 115);
+    }
+
+    .book-info-container__left-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 10px;
+
+      button {
+        width: 90%;
+        height: 35px;
+        background-color: #fff;
+        @include border-style;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 5px 0;
+      }
+
+      .book-info-container__left-raiting {
+        display: inline-block;
+        .material-symbols-outlined {
+          color: gray;
+        }
+        .material-symbols-outlined:hover {
+          color: rgb(216, 196, 13);
+          cursor: pointer;
+        }
+      }
+      .material-symbols-outlined:hover ~ .material-symbols-outlined:before {
+        color: gray;
+      }
+
+      button:first-of-type {
+        background-color: rgb(96, 96, 184);
+      }
+      button:nth-of-type(2) {
+        background-color: rgb(167, 167, 187);
+      }
+      button:first-of-type:hover,
+      button:nth-of-type(2):hover {
+        color: rgb(17, 17, 83);
+      }
+    }
+  }
+  .book-info-container__right {
+    width: 60%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    h4 {
+      font-size: 1.5em;
+    }
+
+    .book-info-container__right-authors {
+      font-size: 1em;
+      color: black;
+
+      span {
+        color: #131853;
+        cursor: pointer;
+        padding: 0 2px;
+      }
+
+      span:after {
+        content: ",";
+      }
+
+      span:last-of-type:after {
+        content: "";
+      }
+
+      span:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .book-info-container__right-details {
+      font-size: 1em;
+      color: black;
+      padding: 10px 0;
+
+      span {
+        color: rgb(77, 76, 76);
+      }
+    }
+
+    .book-info-container__right-statistics {
+      text-align: center;
+      width: 100%;
+      height: 20%;
+      @include flex-between;
+
+      span {
+        color: rgb(77, 76, 76);
+        font-weight: normal;
+      }
+      h5 {
+        width: 23%;
+        font-size: 1em;
+        @include border-style;
+      }
+    }
+  }
+}

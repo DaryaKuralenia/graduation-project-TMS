@@ -1,0 +1,48 @@
+.author-info-subcontainer__works {
+  padding: 25px 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+
+  .author-info-subcontainer__works-amount {
+    font-size: 1.3em;
+    padding: 0 0 20px 20px;
+  }
+
+  .author-info-subcontainer__works-items {
+    padding: 0 20px;
+
+    li {
+      cursor: pointer;
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 10%;
+        height: 110px;
+        box-shadow: 3px 5px 5px rgb(116, 115, 115);
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .author-info-subcontainer__book-info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+
+        h4 {
+          width: 100%;
+          font-weight: bold;
+          cursor: pointer;
+        }
+
+        h4:hover {
+          color: rgb(69, 22, 163);
+        }
+        span {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}

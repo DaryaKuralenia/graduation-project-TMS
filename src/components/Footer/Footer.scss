@@ -1,0 +1,51 @@
+@import "../../mixins.scss";
+
+.footer-container {
+  width: 100%;
+  @include flex-center;
+  flex-direction: column;
+  padding: 25px 0;
+  font-weight: 500;
+  font-size: 0.9em;
+
+  .footer-container__links {
+    width: 90%;
+    text-transform: capitalize;
+    display: flex;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+
+    .footer-container__links-group {
+      width: 20%;
+
+      li {
+        font-size: 1em;
+        font-weight: normal;
+        cursor: pointer;
+        list-style: none;
+        padding: 2px 0;
+      }
+      li:hover {
+        text-decoration: underline;
+      }
+
+      .footer-container__icons {
+        width: 15%;
+      }
+    }
+  }
+  .footer-container__details {
+    width: 90%;
+    display: flex;
+    padding-top: 15px;
+    font-size: 1em;
+
+    span {
+      color: rgb(2, 2, 131);
+    }
+    span:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

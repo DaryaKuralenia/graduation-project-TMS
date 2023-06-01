@@ -1,0 +1,54 @@
+@import "../../../mixins.scss";
+
+.author-info-container {
+  width: 90%;
+  background-color: white;
+  @include border-style;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 0;
+
+  .author-info-subcontainer {
+    width: 80%;
+    font-size: 1em;
+
+    .author-info-subcontainer__description {
+      display: flex;
+      justify-content: space-between;
+
+      .author-info-subcontainer__description-img {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+
+        img {
+          border-radius: 10px;
+        }
+
+        a {
+          text-decoration: none;
+          color: rgb(44, 44, 44);
+          padding-top: 5px;
+        }
+      }
+
+      .author-info-subcontainer__description-text {
+        width: 55%;
+        text-align: left;
+
+        h3 {
+          font-size: 1.7em;
+          color: rgb(39, 39, 39);
+          font-weight: bold;
+          text-align: left;
+        }
+
+        p {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}

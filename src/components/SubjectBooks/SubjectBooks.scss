@@ -1,0 +1,129 @@
+@import "../../mixins.scss";
+
+.books-container {
+  width: 90%;
+  font-size: 1.5em;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  .books-container__subject {
+    display: flex;
+    padding: 5px 0 10px 25px;
+    text-decoration: underline;
+    color: rgb(74, 16, 180);
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #dad5d5f8;
+  }
+
+  .books-container__subject:hover {
+    color: rgb(40, 20, 78);
+  }
+
+  .books-container__books {
+    display: flex;
+    justify-content: space-around;
+
+    .books-container__books-selector {
+      @include flex-center;
+
+      button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        background-color: #7b59bb;
+        user-select: none;
+
+        .material-symbols-outlined {
+          font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+          font-size: 1.5em;
+          color: white;
+        }
+      }
+      button:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      button:hover {
+        background-color: #4e3975;
+      }
+    }
+
+    .books-container__book {
+      width: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+
+      .books-container__book-cover {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        box-shadow: 3px 5px 5px rgb(116, 115, 115);
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .books-container__book-title {
+        font-size: 0.7em;
+        font-weight: bold;
+        padding: 5px 0;
+        cursor: pointer;
+      }
+
+      .books-container__author-name {
+        font-size: 0.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .books-container {
+    font-size: 1.3em;
+
+    .books-container__books {
+      .books-container__book {
+        .books-container__book-cover {
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .books-container {
+    .books-container__books {
+      .books-container__book {
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+
+        .books-container__book-cover {
+          width: 100%;
+          height: 80px;
+        }
+
+        .books-container__book-title {
+          font-size: 0.7em;
+          font-weight: bold;
+          padding: 5px 0;
+          cursor: pointer;
+        }
+
+        .books-container__author-name {
+          font-size: 0.5em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../../mixins.scss";
+
+.search-info-container {
+  width: 90%;
+  min-height: 500px;
+  background-color: white;
+  @include border-style;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+
+  .search-info-container__search-details {
+    font-size: 1.2em;
+    padding: 10px 0;
+    font-style: italic;
+  }
+
+  .search-info-container__author-info {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+
+    img {
+      width: 10%;
+      height: auto;
+      display: block;
+      border-radius: 5px;
+      object-fit: cover;
+      background-image: url("..//..//..//img/no_avatar.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .search-info-container__author-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 75%;
+      padding-left: 20px;
+      text-align: left;
+
+      .search-info-container__author-description-name {
+        width: 100%;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        color: rgb(9, 36, 77);
+      }
+      .search-info-container__author-description-name:hover {
+        color: rgb(21, 9, 77);
+      }
+
+      .search-info-container__author-description-dates {
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
